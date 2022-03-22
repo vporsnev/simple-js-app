@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Pokemon Hollow';
+  src: url('../fonts/Pokemon Hollow.eot');
+  src: url('../fonts/Pokemon Hollow.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Pokemon Hollow.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PokemonHollowNormal';
+  src: url('../fonts/PokemonHollowNormal.svg#PokemonHollowNormal') format('svg'),
+       url('../fonts/PokemonHollowNormal.ttf') format('truetype'),
+       url('../fonts/PokemonHollowNormal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  text-align: center;
+  line-height: 200%;
+}
+
+h1 {
+  font-family: Pokemon Hollow;
+}
