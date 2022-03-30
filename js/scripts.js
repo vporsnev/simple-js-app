@@ -4,10 +4,6 @@ let pokemonList = [
   {name: 'Jigglypuff', height: 5, types: ['fairy', 'normal']},
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-  if (pokemonList[i].height > 5){
-    document.write("<br>" + " " + pokemonList[i].name + " " + "(height:" + " " + pokemonList[i].height + ")" + " - Wow, that’s big!");
-  } else {
-    document.write("<br>" + " " + pokemonList[i].name + " " + "(height:" + " " + pokemonList[i].height + ")");
-  }
-}
+pokemonList.forEach(function(pokemon) {
+  document.write("<br>" + " " + pokemon.name + " " + "(height:" + " " + pokemon.height + ")")
+});
