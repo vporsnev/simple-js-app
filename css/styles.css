@@ -2,7 +2,7 @@
   font-family: 'Pokemon Hollow';
   src: url('../fonts/Pokemon Hollow.eot');
   src: url('../fonts/Pokemon Hollow.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Pokemon Hollow.woff2') format('woff2');
+    url('../fonts/Pokemon Hollow.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -10,14 +10,13 @@
 @font-face {
   font-family: 'PokemonHollowNormal';
   src: url('../fonts/PokemonHollowNormal.svg#PokemonHollowNormal') format('svg'),
-       url('../fonts/PokemonHollowNormal.ttf') format('truetype'),
-       url('../fonts/PokemonHollowNormal.woff') format('woff');
+    url('../fonts/PokemonHollowNormal.ttf') format('truetype'),
+    url('../fonts/PokemonHollowNormal.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  text-align: center;
   line-height: 200%;
 }
 
@@ -26,6 +25,11 @@ body {
   font-family: Pokemon Hollow;
   text-shadow: 4px 4px #ffe54c;
   text-decoration: none;
+}
+
+.bounceInDown {
+   -webkit-animation-name:bounceInDown;
+   animation-name:bounceInDown;
 }
 
 .heading:hover {
@@ -41,39 +45,39 @@ body {
 .pokemon-list {
   margin-left: -40px;
   list-style-type: none;
+  text-align: center;
 }
 
 .button-class {
-    font-size: 16px;
-    letter-spacing: 1px;
-    padding: 13px 20px 13px;
-    width: 10rem;
-    margin-top: 20px;
-    border: 1px solid black;
-    cursor: pointer;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0);
-  }
+  font-size: 16px;
+  letter-spacing: 1px;
+  width: 10rem;
+  margin-top: 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
 
-  .button-class:after {
-    content: "";
-    background-color: #ffe54c;
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    top: 7px;
-    left: 7px;
-    transition: 0.2s;
-  }
+.button-class:after {
+  content: "";
+  background-color: #ffe54c;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
 
-  .button-class:hover:after {
-    top: 0px;
-    left: 0px;
-  }
+.button-class:hover:after {
+  top: 0px;
+  left: 0px;
+}
 
-  @media (min-width: 768px) {
-    .button-class {
-      padding: 13px 50px 13px;
-    }
+@media (min-width: 768px) {
+  .button-class {
+    padding: 13px 50px 13px;
   }
+}
