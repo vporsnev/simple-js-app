@@ -9,14 +9,21 @@
 </head>
 
 <body>
+  <main>
   <div class="test animated bounceInDown">
   <a class='heading' href="index.html">
     <h1>Pokemon App</h1>
   </a>
   </div>
+  <div class="loading-message"></div>
+  
   <ul class='pokemon-list'></ul>
-  <script src="js/polyfill.min.js"></script>
-  <script src="js/fetch.js"></script>
+
+  <div id="modal-container"></div>
+</main>
+
+<script src="js/fetch-polyfill.js"></script>
+<script src="js/promise-polyfill.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 
