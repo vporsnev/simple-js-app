@@ -183,9 +183,11 @@ body {
 }
 
 .modal img {
+  align-items: center;
 	width: 200px;
 	height: auto;
 	margin-bottom: 10px;
+  margin-left: 240px;
 }
 
 .pokemon-name {
@@ -196,14 +198,11 @@ body {
 }
 
 .content-element {
-  margin-top: 50px;
-  margin-left: 100px;
-  float: left;
+  text-align: center;
 }
 
 .modal-img {
-  margin-right: 100px;
-  float: right;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
