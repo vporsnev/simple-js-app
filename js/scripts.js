@@ -1,4 +1,4 @@
-var pokemonRepository = (function() {
+var pokemonRepository = (function () {
   var repository = [];
   var apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
 
@@ -19,10 +19,12 @@ var pokemonRepository = (function() {
   }
 
   function addListItem(pokemon) {
-    pokemonRepository.loadDetails(pokemon).then(function() {
+    pokemonRepository.loadDetails(pokemon).then(function () {
       var $row = $(".row");
 
-      var $card = $('<div data-bs-toggle="modal" data-bs-target="#exampleModal" id="card" class="card" style="width:200px"></div>');
+      var $card = $(
+        '<div data-bs-toggle="modal" data-bs-target="#exampleModal" id="card" class="card" style="width:200px"></div>'
+      );
       var $image = $(
         '<img class="card-img-top" alt="Card image" style="width:70%" />'
       );
@@ -36,23 +38,23 @@ var pokemonRepository = (function() {
       $card.append($cardBody);
       $cardBody.append($cardTitle);
 
-      $card.on("click", function(event) {
+      $card.on("click", function (event) {
         showDetails(pokemon);
       });
     });
   }
 
-  $(document).ready(function(){
-    $("#searchBar").on("keyup", function() {
+  $(document).ready(function () {
+    $("#searchBar").on("keyup", function () {
       var value = $(this).val().toLowerCase();
-      $(".card").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      $(".card").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
       });
     });
   });
 
   function showDetails(item) {
-    pokemonRepository.loadDetails(item).then(function() {
+    pokemonRepository.loadDetails(item).then(function () {
       console.log(item);
       showModal(item);
     });
@@ -60,8 +62,8 @@ var pokemonRepository = (function() {
 
   function loadList() {
     return $.ajax(apiUrl)
-      .then(function(json) {
-        json.results.forEach(function(item) {
+      .then(function (json) {
+        json.results.forEach(function (item) {
           var pokemon = {
             name: item.name,
             detailsUrl: item.url,
@@ -70,7 +72,7 @@ var pokemonRepository = (function() {
           console.log(pokemon);
         });
       })
-      .catch(function(e) {
+      .catch(function (e) {
         console.error(e);
       });
   }
@@ -78,7 +80,7 @@ var pokemonRepository = (function() {
   function loadDetails(item) {
     var url = item.detailsUrl;
     return $.ajax(url)
-      .then(function(details) {
+      .then(function (details) {
         // Now we add the details to the item
         item.imageUrlFront = details.sprites.front_default;
         item.imageUrlBack = details.sprites.back_default;
@@ -96,46 +98,46 @@ var pokemonRepository = (function() {
         // });
         if (item.types.includes("grass")) {
           $(".modal-content").css("background-color", "#9EB23B");
-          $(".modal-content").css({'border-color': '#4f591d'});
+          $(".modal-content").css({ "border-color": "#4f591d" });
         } else if (item.types.includes("fire")) {
           $(".modal-content").css("background-color", "#F15412");
-          $(".modal-content").css({'border-color': '#7a2907'});
+          $(".modal-content").css({ "border-color": "#7a2907" });
         } else if (item.types.includes("psychic")) {
           $(".modal-content").css("background-color", "#A760FF");
-          $(".modal-content").css({'border-color': '#4e00af'});
+          $(".modal-content").css({ "border-color": "#4e00af" });
         } else if (item.types.includes("poison")) {
           $(".modal-content").css("background-color", "#7858A6");
-          $(".modal-content").css({'border-color': '#3c2c52'});
+          $(".modal-content").css({ "border-color": "#3c2c52" });
         } else if (item.types.includes("water")) {
           $(".modal-content").css("background-color", "#92B4EC");
-          $(".modal-content").css({'border-color': '#1c4fa2'});
+          $(".modal-content").css({ "border-color": "#1c4fa2" });
         } else if (item.types.includes("bug")) {
           $(".modal-content").css("background-color", "#809A6F");
-          $(".modal-content").css({'border-color': '#3f4d36'});
+          $(".modal-content").css({ "border-color": "#3f4d36" });
         } else if (item.types.includes("rock")) {
           $(".modal-content").css("background-color", "#FFB72B");
-          $(".modal-content").css({'border-color': '#956200'});
+          $(".modal-content").css({ "border-color": "#956200" });
         } else if (item.types.includes("flying")) {
           $(".modal-content").css("background-color", "#E8FFC2");
-          $(".modal-content").css({'border-color': '#869470'});
+          $(".modal-content").css({ "border-color": "#869470" });
         } else if (item.types.includes("electric")) {
           $(".modal-content").css("background-color", "#F0A500");
-          $(".modal-content").css({'border-color': '#785200'});
+          $(".modal-content").css({ "border-color": "#785200" });
         } else if (item.types.includes("ice")) {
           $(".modal-content").css("background-color", "#92B4EC");
-          $(".modal-content").css({'border-color': '#1c4fa2'});
+          $(".modal-content").css({ "border-color": "#1c4fa2" });
         } else if (item.types.includes("ghost")) {
           $(".modal-content").css("background-color", "#B689C0");
-          $(".modal-content").css({'border-color': '#62396b'});
+          $(".modal-content").css({ "border-color": "#62396b" });
         } else if (item.types.includes("ground")) {
           $(".modal-content").css("background-color", "#E8C07D");
-          $(".modal-content").css({'border-color': '#97691a'});
+          $(".modal-content").css({ "border-color": "#97691a" });
         } else if (item.types.includes("fairy")) {
           $(".modal-content").css("background-color", "#FF6FB5");
-          $(".modal-content").css({'border-color': '#b70058'});
+          $(".modal-content").css({ "border-color": "#b70058" });
         } else if (item.types.includes("steel")) {
           $(".modal-content").css("background-color", "#708090");
-          $(".modal-content").css({'border-color': '#708090'});
+          $(".modal-content").css({ "border-color": "#708090" });
         }
         //loop to get the abilities of a selected pokemon
         item.abilities = [];
@@ -145,7 +147,7 @@ var pokemonRepository = (function() {
 
         item.weight = details.weight;
       })
-      .catch(function(e) {
+      .catch(function (e) {
         console.error(e);
       });
   }
@@ -196,9 +198,9 @@ var pokemonRepository = (function() {
     // hideModal: hideModal
   };
 })();
-pokemonRepository.loadList().then(function() {
+pokemonRepository.loadList().then(function () {
   // Now the data is loaded!
-  pokemonRepository.getAll().forEach(function(pokemon) {
+  pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
   });
 });
