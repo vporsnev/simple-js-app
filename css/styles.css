@@ -23,14 +23,32 @@ body {
 
 .navbar {
   background-color: #DAEAF1;
+  padding: 0 20px 0 10px;
 }
 
 .logo {
   height: 100px;
+  text-align: center;
 }
 
 .navbar-brand {
    font-family: Pokemon Hollow;
+}
+
+.bi-search {
+  color: black;
+}
+
+.btn-outline-success {
+  font-size: 20px;
+  border: none;
+  background-color: #FFC54D;
+}
+
+.form-control {
+  border: none;
+  color: #205375;
+  background-color: #FFC54D;
 }
 
 .card {
@@ -97,4 +115,13 @@ body {
 
 .row {
    padding: 0;
+}
+
+@media (max-width: 500px) {
+  .navbar-brand {
+    margin: auto;
+  }
+  .d-flex {
+    margin: auto;
+  }
 }
