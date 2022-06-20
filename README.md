@@ -12,7 +12,7 @@ This is a small  web  application  with  HTML,   CSS,   and  JavaScript  that  l
 - Ajax
 
 ## Features
-- The  app  loads  data  from  an  external  API;  for  instance.  
+- The  app  loads  data  from  an  external  API.  
 - The  app  displays  a  list  of  items  loaded  from  that  API  after  the  page  is  loaded.  
 - The  app  enables  the  viewing  of  more  details  for  a  given  list  item  (like  a  Pokémon)  on  demand,  such  as  when  clicking  on  a  list  item.  
 - The  app  has  CSS  styling.  
