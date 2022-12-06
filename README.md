@@ -23,6 +23,3 @@ This is a small  web  application  with  HTML,   CSS,   and  JavaScript  that  l
 - The  app  does  not  throw  any  errors  when  being  used.  
 - The  app  is  deployed  to  a  publicly  accessible  platform  like  GitHub  Pages.
 - The  app  works  in  Chrome,  Firefox,  Safari,  Edge,  and  Internet  Explorer  11.
-
-#### Autor
-vporshnev
